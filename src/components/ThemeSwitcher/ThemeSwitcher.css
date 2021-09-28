@@ -1,0 +1,26 @@
+.themeSwitcher {
+  position: absolute;
+  width: 1.6rem;
+  height: 0.8rem;
+  border-radius: 0.4rem;
+  right: 1rem;
+  top: 1rem;
+  border: 1px solid rgb(var(--darkTheme));;
+  cursor: pointer;
+  background-color: rgb(var(--lightTheme));
+
+}
+
+.themeSwitcher > span {
+  display: block;
+  width: 50%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(var(--darkTheme));
+}
+
+@media print {
+    .themeSwitcher {
+       visibility: hidden;
+    }
+  }
