@@ -1,5 +1,5 @@
 :root {
-  font-size: calc(0.4vw + 12px);
+  font-size: calc(0.4vw + 10px);
   --lightTheme: 242, 244, 245;
   --darkTheme: 15, 15, 15;
 }
@@ -15,12 +15,18 @@ body {
   font-family: 'Nunito', sans-serif;
 }
 
-@page {
-  margin: 0mm;
-}
-
 @media (max-width: 555px) {
   :root {
     font-size: 2.5vw;
   }
+}
+
+@page {
+  margin: 0;
+}
+
+@media print {
+  :root {
+    font-size: 14px;
+  } 
 }

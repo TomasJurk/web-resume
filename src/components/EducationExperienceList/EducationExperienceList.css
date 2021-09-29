@@ -1,0 +1,22 @@
+.eduExpContainer {
+    display: flex;
+    padding: 1rem 0;
+}
+
+.eduExpContainer h5 {
+    margin-bottom: .5rem;
+    font-size: .95rem;
+}
+
+.eduExpContainer h6 {
+    font-size: .7rem;
+}
+
+.eduExpLeft {
+    width: 30%;
+}
+
+.eduExpRight {
+    width: 60%;
+    flex: 1;
+}

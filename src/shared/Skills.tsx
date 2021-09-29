@@ -1,6 +1,6 @@
 export const frontendSkills = {
     listName: 'Frontend',
-    list: ['React/Redux', 'Angular 2+', 'Typescript', 'Javascript', 'HTML/CSS', 'Bootstrap, MaterialUI']
+    list: ['React/Redux', 'Angular 2+', 'Typescript', 'Javascript', 'HTML/CSS', 'Bootstrap', 'MaterialUI']
 };
 export const backendSkills = {
     listName: 'Backend',

@@ -1,12 +1,16 @@
 import { useState } from 'react';
 import './App.css';
-
-import { ThemeSwitcher } from './components/ThemeSwitcher/ThemeSwitcher';
-import { SkillsList } from './components/SkillsList/SkillsList';
-import { frontendSkills, backendSkills, personalSkills } from './Skills';
 import ProfileIcon from './assets/icons/profile-icon.svg';
 import ContactIcon from './assets/icons/contact-icon.svg';
 import SkillsIcon from './assets/icons/skills-icon.svg';
+import ExperienceIcon from './assets/icons/experience-icon.svg';
+import EducationIcon from './assets/icons/education-icon.svg';
+
+import { ThemeSwitcher } from './components/ThemeSwitcher/ThemeSwitcher';
+import { SkillsList } from './components/SkillsList/SkillsList';
+import { EducationExperienceList } from './components/EducationExperienceList/EducationExperienceList';
+import { frontendSkills, backendSkills, personalSkills } from './shared/Skills';
+import { experience, education } from './shared/EducationExperience';
 
 const App = () => {
 
@@ -80,7 +84,21 @@ const App = () => {
             <h4>Frontend developer</h4>
           </header>
 
-          <div></div>
+          <div className="sectionItem">
+            <div className="sectionItem-Header">
+              <img src={ExperienceIcon} className="sectionItem-Icon" alt="" />
+              <h2>EXPERIENCE</h2>
+            </div>
+            <EducationExperienceList list={experience}/>
+          </div>
+
+          <div className="sectionItem">
+            <div className="sectionItem-Header">
+              <img src={EducationIcon} className="sectionItem-Icon" alt="" />
+              <h2>EDUCATION</h2>
+            </div>
+            <EducationExperienceList list={education}/>
+          </div>
         </section>
       </div>
     </div>
