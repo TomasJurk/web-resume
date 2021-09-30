@@ -1,5 +1,5 @@
 :root {
-  font-size: calc(0.4vw + 10px);
+  font-size: calc(0.4vw + 8px);
   --lightTheme: 242, 244, 245;
   --darkTheme: 15, 15, 15;
 }
@@ -17,7 +17,7 @@ body {
 
 @media (max-width: 555px) {
   :root {
-    font-size: 2.5vw;
+    font-size: calc(2vw + 1px);
   }
 }
 
@@ -27,6 +27,6 @@ body {
 
 @media print {
   :root {
-    font-size: 14px;
+    font-size: 13px;
   } 
 }

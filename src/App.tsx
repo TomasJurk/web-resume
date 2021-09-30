@@ -8,6 +8,7 @@ import EducationIcon from './assets/icons/education-icon.svg';
 
 import { ThemeSwitcher } from './components/ThemeSwitcher/ThemeSwitcher';
 import { SkillsList } from './components/SkillsList/SkillsList';
+import { Msg } from './components/SkillsList/Msg';
 import { EducationExperienceList } from './components/EducationExperienceList/EducationExperienceList';
 import { frontendSkills, backendSkills, personalSkills } from './shared/Skills';
 import { experience, education } from './shared/EducationExperience';
@@ -20,7 +21,6 @@ const App = () => {
     setTheme(!darkTheme);
   }
   
-// https://elements.envato.com/cv-resume-3HE5CCP/preview
   return (
     <div className={darkTheme ? 'darkTheme' : 'lightTheme'}>
       <ThemeSwitcher darkTheme={darkTheme} clicked={changeTheme} />
@@ -57,8 +57,16 @@ const App = () => {
                 <p>Sønnaveien 29, 1476 Rasta</p>
               </li>
               <li>
+                <h5>Linkedin:</h5>
+                <a href="https://www.linkedin.com/in/jurksys/" target="_blank" rel="noreferrer">
+                  <p>https://www.linkedin.com/in/jurksys/</p>
+                </a>
+              </li>
+              <li>
                 <h5>Website:</h5>
-                <p>https://tomasjurk.github.io/</p>
+                <a href="https://tomasjurk.github.io/" target="_blank" rel="noreferrer">
+                  <p>https://tomasjurk.github.io/</p>
+                </a>
               </li>
             </ul>
           </div>
@@ -101,6 +109,7 @@ const App = () => {
           </div>
         </section>
       </div>
+      <Msg />
     </div>
   );
 }

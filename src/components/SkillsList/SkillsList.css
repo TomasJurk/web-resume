@@ -1,3 +1,17 @@
 .skillsList {
-    flex: 1;
+  flex: 1;
+}
+
+.msg {
+  display: none;
+  color: black;
+  position: absolute;
+  bottom: 0;
+  font-size: 10px;
+}
+
+@media print {
+  .msg {
+    display: block;
+  }
 }
