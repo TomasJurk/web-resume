@@ -7,10 +7,6 @@
   margin: 0 auto;
 }
 
-* {
-  /* border: 1px solid gray; */
-}
-
 .lightTheme {
   background-color: rgb(var(--lightTheme));
   color: rgb(var(--darkTheme));

@@ -8,19 +8,18 @@ import EducationIcon from './assets/icons/education-icon.svg';
 
 import { ThemeSwitcher } from './components/ThemeSwitcher/ThemeSwitcher';
 import { SkillsList } from './components/SkillsList/SkillsList';
-import { Msg } from './components/SkillsList/Msg';
 import { EducationExperienceList } from './components/EducationExperienceList/EducationExperienceList';
 import { frontendSkills, backendSkills, personalSkills } from './shared/Skills';
-import { experience, education } from './shared/EducationExperience';
+import { experience } from './shared/EducationExperience';
+import { education } from './shared/Education';
 
 const App = () => {
-
   const [darkTheme, setTheme] = useState<boolean>(false);
 
   const changeTheme = () => {
     setTheme(!darkTheme);
-  }
-  
+  };
+
   return (
     <div className={darkTheme ? 'darkTheme' : 'lightTheme'}>
       <ThemeSwitcher darkTheme={darkTheme} clicked={changeTheme} />
@@ -35,7 +34,11 @@ const App = () => {
               <img src={ProfileIcon} className="sectionItem-Icon" alt="" />
               <h2>ABOUT ME</h2>
             </div>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat qui, officia laudantium adipisci nam id unde et pariatur harum inventore iste voluptatibus ullam earum hic deserunt, tempore, reprehenderit quam tempora!</p>
+            <p>
+              An experienced Frontend developer with knowledge of the most popular frameworks such as ReactJS and Angular
+              2+. Currently focused on React with Redux or MobX. Always trying something new, currently in Fullstack development and working with Node,
+              Express and MongoDB.
+            </p>
           </div>
 
           <div className="sectionItem">
@@ -64,8 +67,8 @@ const App = () => {
               </li>
               <li>
                 <h5>Website:</h5>
-                <a href="https://tomasjurk.github.io/" target="_blank" rel="noreferrer">
-                  <p>https://tomasjurk.github.io/</p>
+                <a href="https://jurksys.me/" target="_blank" rel="noreferrer">
+                  <p>https://jurksys.me/</p>
                 </a>
               </li>
             </ul>
@@ -77,12 +80,15 @@ const App = () => {
               <h2>SKILLS</h2>
             </div>
             <div className="skillsListContainer">
-              <SkillsList listName={frontendSkills.listName} list={frontendSkills.list} />
-              <SkillsList listName={backendSkills.listName} list={backendSkills.list} />
+              <SkillsList title={frontendSkills.title} list={frontendSkills.list} />
+              <SkillsList title={backendSkills.title} list={backendSkills.list} />
             </div>
             <div className="skillsListContainer">
-              <SkillsList listName={personalSkills.listName} list={personalSkills.list} />
+              <SkillsList title={personalSkills.title} list={personalSkills.list} />
             </div>
+            {/* <div className="skillsListContainer">
+              <SkillsList title={languages.title} list={languages.list} />
+            </div> */}
           </div>
         </section>
 
@@ -97,7 +103,7 @@ const App = () => {
               <img src={ExperienceIcon} className="sectionItem-Icon" alt="" />
               <h2>EXPERIENCE</h2>
             </div>
-            <EducationExperienceList list={experience}/>
+            <EducationExperienceList list={experience} />
           </div>
 
           <div className="sectionItem">
@@ -105,13 +111,12 @@ const App = () => {
               <img src={EducationIcon} className="sectionItem-Icon" alt="" />
               <h2>EDUCATION</h2>
             </div>
-            <EducationExperienceList list={education}/>
+            <EducationExperienceList list={education} />
           </div>
         </section>
       </div>
-      <Msg />
     </div>
   );
-}
+};
 
 export default App;
