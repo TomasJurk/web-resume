@@ -1,6 +1,4 @@
 ## My resume built with React and Typescript
 
-In the project directory, you can run:
-
 ### 1. `npm i`
 ### 2. `npm start`
