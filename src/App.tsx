@@ -10,7 +10,7 @@ import { ThemeSwitcher } from './components/ThemeSwitcher/ThemeSwitcher';
 import { SkillsList } from './components/SkillsList/SkillsList';
 import { EducationExperienceList } from './components/EducationExperienceList/EducationExperienceList';
 import { frontendSkills, backendSkills, personalSkills } from './shared/Skills';
-import { experience } from './shared/EducationExperience';
+import { experience } from './shared/Experience';
 import { education } from './shared/Education';
 
 const App = () => {
